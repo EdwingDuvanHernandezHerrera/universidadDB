@@ -4,7 +4,9 @@
 
 ### 1. Normalización de la base de datos
 
-![modelo universidad_db](C:\Users\edwin\Downloads\modelo universidad_db.png)
+!https://raw.githubusercontent.com/EdwingDuvanHernandezHerrera/universidadDB/main/modelo%20universidad_db.png
+
+
 
 
 
