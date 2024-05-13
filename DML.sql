@@ -1,6 +1,6 @@
-#### Tabla grado:
 
-```sql
+
+
 INSERT INTO grado VALUES (1, 'Grado en Ingeniería Agrícola (Plan 2015)');
 INSERT INTO grado VALUES (2, 'Grado en Ingeniería Eléctrica (Plan 2014)');
 INSERT INTO grado VALUES (3, 'Grado en Ingeniería Electrónica Industrial (Plan 2010)');
@@ -11,20 +11,20 @@ INSERT INTO grado VALUES (7, 'Grado en Biotecnología (Plan 2015)');
 INSERT INTO grado VALUES (8, 'Grado en Ciencias Ambientales (Plan 2009)');
 INSERT INTO grado VALUES (9, 'Grado en Matemáticas (Plan 2010)');
 INSERT INTO grado VALUES (10, 'Grado en Química (Plan 2009)');
-```
 
-#### Tabla Curso
 
-```sql
+
+
+
 INSERT INTO curso VALUES (1, 2014, 2015);
 INSERT INTO curso VALUES (2, 2015, 2016);
 INSERT INTO curso VALUES (3, 2016, 2017);
 INSERT INTO curso VALUES (4, 2017, 2018);
-```
 
-#### Tabla Departamento
 
-```sql
+
+
+
 INSERT INTO departamento VALUES (1, 'Informática');
 INSERT INTO departamento VALUES (2, 'Matemáticas');
 INSERT INTO departamento VALUES (3, 'Economía y Empresa');
@@ -34,17 +34,57 @@ INSERT INTO departamento VALUES (6, 'Química y Física');
 INSERT INTO departamento VALUES (7, 'Filología');
 INSERT INTO departamento VALUES (8, 'Derecho');
 INSERT INTO departamento VALUES (9, 'Biología y Geología');
-```
 
-#### Tabla Ciudad
 
-```sql
-INSERT INTO ciudad VALUES (1, "Almería")
-```
 
-#### Tablas Dirección
 
-```sql
+
+INSERT INTO ciudad VALUES (1, "Almería");
+
+
+
+
+INSERT INTO tipo_sexo (nombre_tipo_sexo) VALUES
+('H'),
+('M'); 
+
+
+
+
+
+INSERT INTO profesor (nif, nombre_profesor, apellido1, apellido2, fecha_nacimiento, id_tipo_sexo, id_ciudad, id_dpto) VALUES
+('11105554G', 'Zoe', 'Ramirez', 'Gea', '1979-08-19', 2, 1, 1),
+('38223286T', 'David', 'Schmidt', 'Fisher', '1978-01-19', 1, 1, 2),
+('79503962T', 'Cristina', 'Lemke', 'Rutherford', '1977-08-21', 2, 1, 3),
+('61142000L', 'Esther', 'Spencer', 'Lakin', '1977-05-19', 2, 1, 4),
+('85366986W', 'Carmen', 'Streich', 'Hirthe', '1971-04-29', 2, 1, 4),
+('73571384L', 'Alfredo', 'Stiedemann', 'Morissette', '1980-02-01', 1, 1, 6),
+('82937751G', 'Manolo', 'Hamill', 'Kozey', '1977-01-02', 1, 1, 1),
+('80502866Z', 'Alejandro', 'Kohler', 'Schoen', '1980-03-14', 1, 1, 2),
+('10485008K', 'Antonio', 'Fahey', 'Considine', '1982-03-18', 1, 1, 3),
+('85869555K', 'Guillermo', 'Ruecker', 'Upton', '1973-05-05', 1, 1, 4),
+('04326833G', 'Micaela', 'Monahan', 'Murray', '1976-02-25', 1, 1, 5),
+('79221403L', 'Francesca', 'Schowalter', 'Muller', '1980-10-31', 1, 1, 6),
+('13175769N', 'Pepe', 'Sánchez', 'Ruiz', '1980-10-16', 1, 1, 1),
+('98816696W', 'Juan', 'Guerrero', 'Martínez', '1980-11-21', 1, 1, 1),
+('77194445M', 'María', 'Domínguez', 'Hernández', '1980-12-13', 2, 1, 2);
+
+
+INSERT INTO alumno (nif, nombre, apellido1, apellido2, id_ciudad, fecha_nacimiento, id_tipo_sexo) VALUES
+('89542419S', 'Juan', 'Saez', 'Vega', 1, '1992-08-08', 1),
+('26902806M', 'Salvador', 'Sánchez', 'Pérez', 1, '1991-03-28', 1),
+('17105885A', 'Pedro', 'Heller', 'Pagac', 1, '2000-10-05', 1),
+('04233869Y', 'José', 'Koss', 'Bayer', 1, '1998-01-28', 1),
+('97258166K', 'Ismael', 'Strosin', 'Turcotte', 1, '1999-05-24', 1),
+('82842571K', 'Ramón', 'Herzog', 'Tremblay', 1, '1996-11-21', 1),
+('46900725E', 'Daniel', 'Herman', 'Pacocha', 1, '1997-04-26', 1),
+('11578526G', 'Inma', 'Lakin', 'Yundt', 1, '1998-09-01', 2),
+('79089577Y', 'Juan', 'Gutiérrez', 'López', 1, '1998-01-01', 1),
+('41491230N', 'Antonio', 'Domínguez', 'Guerrero', 1, '1999-02-11', 1),
+('64753215G', 'Irene', 'Hernández', 'Martínez', 1, '1996-03-12', 2),
+('85135690V', 'Sonia', 'Gea', 'Ruiz', 1, '1995-04-13', 2);
+
+
 INSERT INTO direccion_alumno (barrio, calle, carrera, id_ciudad, id_alumno) VALUES
 ('Mercurio', 123, 456, 1, 1),
 ('Real del barrio alto', 234, 567, 1, 2),
@@ -75,67 +115,17 @@ INSERT INTO direccion_profesor (barrio, calle, carrera, id_ciudad, id_profesor) 
 ('Duero', 900, 345, 1, 13),
 ('Tajo', 111, 456, 1, 14),
 ('Sierra de los Filabres', 222, 567, 1, 15);
-```
 
-#### Tabla Tipo_Sexo
 
-```sql
-INSERT INTO tipo_sexo (nombre_tipo_sexo) VALUES
-('H'),
-('M'); 
-```
 
-#### Tabla Profesor
-
-```sql
-INSERT INTO profesor (nif, nombre_profesor, apellido1, apellido2, fecha_nacimiento, id_tipo_sexo, id_ciudad, id_direccion, id_dpto) VALUES
-('11105554G', 'Zoe', 'Ramirez', 'Gea', '1979-08-19', 2, 1, 1, 1),
-('38223286T', 'David', 'Schmidt', 'Fisher', '1978-01-19', 1, 1, 2, 2),
-('79503962T', 'Cristina', 'Lemke', 'Rutherford', '1977-08-21', 2, 1, 3, 3),
-('61142000L', 'Esther', 'Spencer', 'Lakin', '1977-05-19', 2, 1, 4, 4),
-('85366986W', 'Carmen', 'Streich', 'Hirthe', '1971-04-29', 2, 1, 5, 4),
-('73571384L', 'Alfredo', 'Stiedemann', 'Morissette', '1980-02-01', 1, 1, 6, 6),
-('82937751G', 'Manolo', 'Hamill', 'Kozey', '1977-01-02', 1, 1, 7, 1),
-('80502866Z', 'Alejandro', 'Kohler', 'Schoen', '1980-03-14', 1, 1, 8, 2),
-('10485008K', 'Antonio', 'Fahey', 'Considine', '1982-03-18', 1, 1, 9, 3),
-('85869555K', 'Guillermo', 'Ruecker', 'Upton', '1973-05-05', 1, 1, 10, 4),
-('04326833G', 'Micaela', 'Monahan', 'Murray', '1976-02-25', 1, 1, 11, 5),
-('79221403L', 'Francesca', 'Schowalter', 'Muller', '1980-10-31', 1, 1, 12, 6),
-('13175769N', 'Pepe', 'Sánchez', 'Ruiz', '1980-10-16', 1, 1, 13, 1),
-('98816696W', 'Juan', 'Guerrero', 'Martínez', '1980-11-21', 1, 1, 14, 1),
-('77194445M', 'María', 'Domínguez', 'Hernández', '1980-12-13', 2, 1, 15, 2);
-
-```
-
-#### Tabla Alumno
-
-```sql
-INSERT INTO alumno (nif, nombre, apellido1, apellido2, id_ciudad, id_direccion, fecha_nacimiento, id_tipo_sexo) VALUES
-('89542419S', 'Juan', 'Saez', 'Vega', 1, 1, '1992-08-08', 1),
-('26902806M', 'Salvador', 'Sánchez', 'Pérez', 1, 2, '1991-03-28', 1),
-('17105885A', 'Pedro', 'Heller', 'Pagac', 1, 3, '2000-10-05', 1),
-('04233869Y', 'José', 'Koss', 'Bayer', 1, 4, '1998-01-28', 1),
-('97258166K', 'Ismael', 'Strosin', 'Turcotte', 1, 5, '1999-05-24', 1),
-('82842571K', 'Ramón', 'Herzog', 'Tremblay', 1, 6, '1996-11-21', 1),
-('46900725E', 'Daniel', 'Herman', 'Pacocha', 1, 7, '1997-04-26', 1),
-('11578526G', 'Inma', 'Lakin', 'Yundt', 1, 8, '1998-09-01', 2),
-('79089577Y', 'Juan', 'Gutiérrez', 'López', 1, 9, '1998-01-01', 1),
-('41491230N', 'Antonio', 'Domínguez', 'Guerrero', 1, 10, '1999-02-11', 1),
-('64753215G', 'Irene', 'Hernández', 'Martínez', 1, 11, '1996-03-12', 2),
-('85135690V', 'Sonia', 'Gea', 'Ruiz', 1, 12, '1995-04-13', 2);
-```
-
-#### Tabla Tipo_telefono
-
-```sql
 INSERT INTO tipo_telefono (nombre_tipo_tel) VALUES
 ('celular'),
 ('fijo');
-```
 
-#### Tabla Telefono_profesor
 
-```sql
+
+
+
 INSERT INTO telefono_profesor (numero_tel, id_tipo_tel, id_profesor) VALUES
 ('618223876', 1, 1),
 ('678516294', 2, 2),
@@ -152,11 +142,11 @@ INSERT INTO telefono_profesor (numero_tel, id_tipo_tel, id_profesor) VALUES
 (NULL, 1, 13),
 (NULL, 2, 14),
 (NULL, 1, 15);
-```
 
-#### Tabla Telefono_alumno
 
-```sql
+
+
+
 INSERT INTO telefono_alumno (numero_tel, id_tipo_tel, id_alumno) VALUES
 ('618253876', 1, 1),
 ('950254837', 2, 2),
@@ -170,20 +160,20 @@ INSERT INTO telefono_alumno (numero_tel, id_tipo_tel, id_alumno) VALUES
 ('626652498', 2, 10),
 ('628452384', 1, 11),
 ('678812017', 2, 12);
-```
 
-#### Tabla Tipo_asignatura
 
-```sql
+
+
+
 INSERT INTO tipo_asignatura (nombre_tipo_asignatura) VALUES
 ('básica'),
 ('obligatoria'),
 ('optativa');
-```
 
-#### Tabla Asignatura
 
-```sql
+
+
+
 INSERT INTO asignatura (id_asignatura, nombre_asignatura, creditos, id_tipo_asignatura, cuatrimestre, id_profesor, id_grado) VALUES
 (1, 'Álgebra lineal y matemática discreta', 6, 1, 1, 1, 4),
 (2, 'Cálculo', 6, 2, 1, 2, 4),
@@ -268,11 +258,11 @@ INSERT INTO asignatura (id_asignatura, nombre_asignatura, creditos, id_tipo_asig
 (81, 'Genómica y proteómica', 6, 3, 3, NULL, 4),
 (82, 'Procesos biotecnológicos', 6, 1, 3, NULL, 4),
 (83, 'Técnicas instrumentales avanzadas', 6, 2, 3, NULL, 4);
-```
 
-#### Tabla Matricula_alumno_asignatura
 
-```sql
+
+
+
 INSERT INTO matricula_alumno_asignatura (id_alumno, id_asignatura, id_curso) VALUES
 (1, 1, 1),
 (1, 2, 1),
@@ -309,5 +299,5 @@ INSERT INTO matricula_alumno_asignatura (id_alumno, id_asignatura, id_curso) VAL
 (4, 8, 2),
 (4, 9, 2),
 (4, 10, 2);
-```
+
 
